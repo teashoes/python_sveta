@@ -1,0 +1,4 @@
+x=input('Input your first name: ')
+y=input('Input your last name: ')
+user_info={"fname":input(), "lname":input()}
+print(user_info)
