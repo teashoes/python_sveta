@@ -24,4 +24,4 @@ def find_verb_form(bot, update):
     else: 
         update.message.reply_text('?')
 
-main()
+# main()
