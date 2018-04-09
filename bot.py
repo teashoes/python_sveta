@@ -3,7 +3,7 @@ from extract_conj import conj_show
 import settings
 
 def main():
-    updater = Updater(TELEGRAM_API_KEY)
+    updater = Updater(settings,TELEGRAM_API_KEY)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", greet_user))
     dp.add_handler(CommandHandler("conj", find_verb_form))
