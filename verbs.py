@@ -20,7 +20,7 @@ def verb_conj(verb):
     pronouns_list=pronouns_list[0:6]
     
     d=[]
-    for i in range(0, 42, 6):
+    for i in range(0, 54, 6):
         d.append(dict(zip(pronouns_list,verbs_list[i:i+6])))
 
     return d
