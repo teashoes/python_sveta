@@ -3,7 +3,7 @@ from verbs import verb_conj
 import csv
 
 def verb_add(verb_name):
-    for i in range(0,6,1):
+    for i in range(0,8,1):
         vv=verb_conj(verb_name)
         v=vv[i]
         for j in v.keys():
