@@ -1,5 +1,5 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-from extract_conj import conj_show
+from extract import conj_show, noun_show
 import settings
 
 def main():
@@ -7,12 +7,15 @@ def main():
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", greet_user))
     dp.add_handler(CommandHandler("conj", find_verb_form))
+    dp.add_handler(CommandHandler("n", 
     updater.start_polling()
     updater.idle()
 
 def greet_user(bot, update):
-    text = 'Hoi! Het is een Telegram-bot voor mensen wie studieren Nederlands.\
-     Als je wil een verba konjugeren, schriv je "/conj verba praeteritum nummer.\
+    text = 'Привет! Этот телеграм канал предназначен для людей, изучающих Недерландский язык.\
+     Есть ты хочешь узнать артикль им.существиетльного, введи команду \noun и искомое слово.\
+     Если ты хочешь узнать спряжение глагола, то введи команду и глагол в зависимости от времени спряжения:\
+     \pr - настоящее время, \pa - прошедшее время, \pp - перфект, \pap - паст перфект\
      "'
     print(text)
     update.message.reply_text(text)
