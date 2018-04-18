@@ -1,4 +1,4 @@
-from database import db_session, Verb
+from database import db_session, Verb, Noun
 from sqlalchemy import and_, or_, not_
 from add_verb_db import verb_add
 from add_noun_db import noun_add
@@ -25,6 +25,6 @@ def noun_show(noun):
         noun_add(noun)
         for row in Noun.query.filter(Noun.noun_name.like(noun)):
             reply.append(row.artikel+' '+row.noun_name)        
-    return(reply)
+    return(reply[0])
 
 # print(conj_show('verhuizen', 0))
