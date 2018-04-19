@@ -29,7 +29,7 @@ def find_verb_form(bot, update):
 def find_noun(bot, update):
     user_text = update.message.text.split(' ')
     if len(user_text) == 2:
-        update.message.reply_text("\n".join(noun_show(user_text[1]))
+        update.message.reply_text("\n".join(noun_show(user_text[1])))
     else:
         update.message.reply_text('?')
 # main()
